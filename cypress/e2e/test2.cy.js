@@ -34,7 +34,7 @@ describe('test jour 2', () => {
       }
     ]
     for(let i = 0; i<5; i++){
-    cy.visit('http://localhost/testing/addUser')
+    cy.visit('https://leo.adrardev.fr/addUser')
     console.log(tab[0].nom)
     cy.get(':input[name="nom"]').type(tab[i].nom)
     cy.get(':input[name="prenom"]').type(tab[i].prenom)
@@ -44,7 +44,7 @@ describe('test jour 2', () => {
     cy.get('#msgzone').invoke("text").then((text => {
       //on teste la valeur de text
       if(text == "connexion réussie"){
-        const url = "http://localhost/testing/api/addTest"
+        const url = "https://leo.adrardev.fr/api/addTest"
         const name = "addUserAPI"
         let date = new Date()
         date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
@@ -56,7 +56,7 @@ describe('test jour 2', () => {
           body: json,
         })
       }else{
-        const url = "http://localhost/testing/api/addTest"
+        const url = "https://leo.adrardev.fr/api/addTest"
         const name = "addUserAPI"
         let date = new Date()
         date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()

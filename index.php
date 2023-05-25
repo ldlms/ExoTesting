@@ -22,22 +22,22 @@
     $apiTestsCtrl = new ApiTestsController();
     //routeur
     switch ($path) {
-        case '/testing/':
+        case '/':
             include './home.php';
             break;
-        case '/testing/addUser':
+        case '/addUser':
             $utilCtrl->insertUser();
             break;
-        case '/testing/test':
+        case '/test':
             include './test.php';
             break;
-        case '/testing/api/addTest':
+        case '/api/addTest':
             $apiTestsCtrl->addTestsToJson();
             break;
-        case '/testing/addTest':
+        case '/addTest':
             include './App/Vue/vueAddTest.php';
             break;
-        case '/testing/Connexion':
+        case '/Connexion':
             $utilCtrl->connectUser();
             break;
         default:

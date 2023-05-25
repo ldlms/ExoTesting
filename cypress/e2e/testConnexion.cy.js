@@ -33,7 +33,7 @@ describe('test connexion', () => {
       }
     ]
     for(let i = 0; i<5; i++){
-    cy.visit('http://localhost/testing/Connexion')
+    cy.visit('https://leo.adrardev.fr/Connexion')
     cy.get(':input[name="nom"]').type(tab[i].nom)
     cy.get(':input[name="prenom"]').type(tab[i].prenom)
     cy.get(':input[name="mail"]').type(tab[i].mail)
@@ -41,7 +41,7 @@ describe('test connexion', () => {
     cy.get(':input[name="submit"]').click()
     cy.get('#msgzone').invoke("text").then((text => {
       if(text == "connexion réussie"){
-        const url = "http://localhost/testing/api/addTest"
+        const url = "https://leo.adrardev.fr/api/addTest"
         const name = "connectUserAPI"
         let date = new Date()
         date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
@@ -53,7 +53,7 @@ describe('test connexion', () => {
           body: json,
         })
       }else{
-        const url = "http://localhost/testing/api/addTest"
+        const url = "https://leo.adrardev.fr/pi/addTest"
         const name = "connectUserAPI"
         let date = new Date()
         date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
